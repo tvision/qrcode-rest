@@ -19,18 +19,15 @@ composer install
 phpunit
 ```
 
-## Run
+## Run on dev
 
 `php -S 0.0.0.0:8080 web/dev.php`
 
-in production link the root to `web/prod.php`
-
-
-#### On the browser:
+#### See it on the browser:
 
 `http://0.0.0.0:8080/143241234123412341234`
 
-#### With the size parameters:
+#### Different size parameters:
 
 `http://0.0.0.0:8080/143241234123412341234`
 
@@ -38,7 +35,11 @@ in production link the root to `web/prod.php`
 
 `curl -H "Accept: image/jpg"  http://0.0.0.0:8080/143241234123412341234?size=300 > a.jpg`
 
-## Deploy with Capistrano
+## Run on production:
+
+The front controller is at `web/prod.php`
+
+#### Deploy with Capistrano
 
 `gem install`
 
@@ -46,7 +47,7 @@ in production link the root to `web/prod.php`
 
 `cap deploy HOSTS="your.server.com"`
 
-## Nginx virtual hosts:
+#### Nginx virtual hosts:
 
 ``` nginx
 

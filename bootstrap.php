@@ -41,6 +41,7 @@ $app->get( '/{content}', function($content, Request $request) use ($app)
 
         return $qrCode;
     })
+    ->assert('content', '.+')
     ->after(function (Request $request, Response $response) use ($app)
     {
         $formatNegotiator = $app["format.negotiator"];
